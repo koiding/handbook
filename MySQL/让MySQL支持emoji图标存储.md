@@ -1,7 +1,7 @@
 
 # 让MySQL支持emoji图标存储
 
-在`MySLQ`中 UPDATA 和 INSERT 数据的时候，如果数据上面带有`emoji`图标，例如：`💗`、`👽`、`💔`很容易更新活着插入不成功，导致报错。
+在`MySLQ`中 UPDATA 和 INSERT 数据的时候，如果数据上面带有`emoji`图标，例如：`💗`、`👽`、`💔`很容易更新或者插入不成功，导致报错。
 
 ```sql
 Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: 
@@ -40,7 +40,7 @@ utf8mb4完全向后兼容utf8，无乱码或其他数据丢失的形式出现。
 
 ## 检查你的字段和索引
 
-不要将所有的都设置成`utf8mb4`，这个冒得必要。我只在我某些字段类型为`VARCHAR`的时候才设置成`utf8mb4`。
+不要将所有的都设置成`utf8mb4`，这个没有必要。我只在我某些字段类型为`VARCHAR`的时候才设置成`utf8mb4`。
 
 ## 修改MySQL配置文件
 
